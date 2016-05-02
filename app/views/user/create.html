@@ -1,0 +1,32 @@
+<h2 ng-show="user._id>0">Edit</h2>
+<h2 ng-hide="user._id>0">Create</h2>
+
+<form name="userForm" ng-submit="saveData(user)" novalidate class="form-horizontal">
+    <div class="form-group">
+        <label class="col-md-2">Name</label>
+
+        <div class="col-md-10">
+            <input type="text" ng-model="user.name" name="name" ng-required="true" class="form-control" />
+
+            <p ng-show="userForm.name.$error.required && (IsSubmit || userForm.name.$dirty)" class="text-danger">Please Enter Name</p>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-md-2">Address</label>
+
+        <div class="col-md-10">
+            <textarea name="address" ng-model="user.address" ng-required="true" class="form-control"></textarea>
+
+            <p ng-show="userForm.address.$error.required && (IsSubmit || userForm.name.$dirty)" class="text-danger">
+                Please Enter Address</p>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Update" class="btn btn-primary" ng-show="user._id>0" />
+            <input type="submit" value="Save" class="btn btn-primary" ng-hide="user._id>0" />
+            <a ui-sref="users" class="btn btn-warning">Cancel</a>
+        </div>
+    </div>
+</form>

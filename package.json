@@ -1,0 +1,14 @@
+{
+  "name": "MEAN-CRUD",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "server.js"
+  },
+  "dependencies": {
+    "body-parser": "~1.13.2",
+    "express": "~4.13.1",
+    "mongoose": "^4.4.10",
+    "mongoose-auto-increment": "^5.0.1"
+  }
+}

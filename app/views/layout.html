@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>{{Title}}</title>
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+    <script src="libs/angular.js"></script>
+    <script src="libs/angular-ui-router.js"></script>
+
+    <script src="app.js"></script>
+    <script src="services/user.service.js"></script>
+    <script src="controllers/user.controller.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" ui-sref="users">MEAN CRUD</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li><a ui-sref="create">Add New User</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container">
+    <ui-view></ui-view>
+</div>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<h2>Users Listing</h2>
+<table class="table">
+    <tr>
+        <th>User Id</th>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Actions</th>
+    </tr>
+    <tr ng-repeat="user in users">
+        <td>{{user._id}}</td>
+        <td>{{user.name}}</td>
+        <td>{{user.address}}</td>
+        <td>
+            <a ui-sref="edit({id:user._id})">Edit</a> |
+            <a href="#" ng-click="deleteUser(user._id)">Delete</a>
+        </td>
+    </tr>
+</table>
