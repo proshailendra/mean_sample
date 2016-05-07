@@ -21,5 +21,5 @@ angular.module("app", ["ui.router"])
         });
     })
     .constant("globalConfig", {
-        apiAddress: 'http://localhost:3000/api/userservice'
+        apiAddress: 'http://dotnettricks.herokuapp.com/api/userservice'
     });
