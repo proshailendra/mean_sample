@@ -14,7 +14,7 @@ app.use(express.static(path.join(__dirname, 'app')));
 app.use('/', routes);
 //app.use('/api', apiRoutes);
 
-var port = process.env.PORT || 8080;
+var port = process.env.PORT || 3000;
 app.listen(port, function() {
     console.log('Our app is running on http://localhost:' + port);
 });
