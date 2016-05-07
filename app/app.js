@@ -21,5 +21,5 @@ angular.module("app", ["ui.router"])
         });
     })
     .constant("globalConfig", {
-        apiAddress: 'http://dotnettricks.herokuapp.com/api/userservice'
+        apiAddress: 'https://dotnettricks.herokuapp.com/api/userservice'
     });
